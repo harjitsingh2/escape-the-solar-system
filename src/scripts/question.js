@@ -18,4 +18,4 @@ ctx.fillText("Questions", 150, 50);
 
 
 
-export default Question;
+// export default Question;

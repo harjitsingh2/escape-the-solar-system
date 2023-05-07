@@ -8,7 +8,7 @@ class Planet {
     }  
     
     // add Mercury to canvas
-    make_base(ctx) {
+    makeMercury(ctx) {
         ctx.font = "bold 50px serif";
         ctx.fillText("Mercury", 150, 50);
         let base_image = new Image();
@@ -16,9 +16,10 @@ class Planet {
         base_image.onload = function() {
             ctx.drawImage(base_image, 0, 100, 400, 400);
         }
+        console.log("Mercury created");
     }
     // add Venus to canvas
-    make_base(ctx) {
+    makeVenus(ctx) {
         ctx.font = "bold 50px serif";
         ctx.fillText("Venus", 150, 50);
         let base_image = new Image();
@@ -26,6 +27,7 @@ class Planet {
         base_image.onload = function() {
             ctx.drawImage(base_image, 0, 100, 400, 400);
         }
+        console.log("Venus created");
     }
 
     // draw circle onto canvas
