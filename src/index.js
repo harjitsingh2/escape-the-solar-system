@@ -1,6 +1,6 @@
 // import Example from './scripts/example';
-// import Planet from './scripts/planet';
-// import Question from './scripts/question';
+import Planet from './scripts/planet.js';
+import Question from './scripts/question.js';
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     console.log('hello world')
@@ -11,6 +11,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('planet loaded')
+    const planet = document.getElementById("myplanet");
+    planet.width = 400;
+    planet.height = 600;
 
-
+    const ctx = planet.getContext("2d");
+    let mercury = new Planet;
+    //mercury.draw(ctx);
+    mercury.make_base(ctx);
 })
