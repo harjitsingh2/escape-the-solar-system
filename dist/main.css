@@ -9,3 +9,11 @@
 #main {
   color: purple;
 }
+
+h1 {
+  font-size: 50px;
+  font-weight: 800;
+  color: white;
+  font-family: monospace;
+  background-color: rgb(56, 56, 189);
+}

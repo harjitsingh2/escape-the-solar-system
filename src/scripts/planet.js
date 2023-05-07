@@ -7,7 +7,7 @@ class Planet {
         // this.name = name;
     }  
     
-    // add image to canvas
+    // add Mercury to canvas
     make_base(ctx) {
         ctx.font = "bold 50px serif";
         ctx.fillText("Mercury", 150, 50);
@@ -17,6 +17,17 @@ class Planet {
             ctx.drawImage(base_image, 0, 100, 400, 400);
         }
     }
+    // add Venus to canvas
+    make_base(ctx) {
+        ctx.font = "bold 50px serif";
+        ctx.fillText("Venus", 150, 50);
+        let base_image = new Image();
+        base_image.src = './src/images/venus.jpeg';
+        base_image.onload = function() {
+            ctx.drawImage(base_image, 0, 100, 400, 400);
+        }
+    }
+
     // draw circle onto canvas
     draw(ctx) {
         ctx.font = "bold 50px serif";
@@ -31,16 +42,6 @@ class Planet {
         ctx.fill();
     }
 }
-   
-
-
-// const planet = document.getElementById("myplanet"); // we are grabbing the canvas element here
-// planet.width = 400;
-// planet.height = 600;
-
-// this allows us to draw stuff on it
-// const ctx = planet.getContext("2d");
-
 
 
 export default Planet;

@@ -18,5 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctx = planet.getContext("2d");
     let mercury = new Planet;
     //mercury.draw(ctx);
-    mercury.make_base(ctx);
+    //mercury.make_base(ctx);
+
+    // venus
+    let venus = new Planet;
+    venus.make_base(ctx);
 })

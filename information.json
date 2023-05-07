@@ -1,0 +1,32 @@
+{
+    "mercury": {
+        "information": "Mercury might be the smallest planet in our solar system, but it is also the fastest - traveling 29 miles per second! This is due to its proximity to the Sun. Even though it is so close to the Sun, it is not the hottest planet in our solar system. Venus is actually the hottest. Mercury has no rings or moons. The small, terestrial planet does not have an atmosphere. It does have a thin exosphere made of oxygen, sodium, hydrogen, helium, and potassium, in descending order.", 
+        "questions": {
+            "1": "Mercury is the _______ planet from the Sun",
+            "2": "What is Mercury's exosphere primarily composed of?",
+            "3": "How fast does Mercury travel?"
+        }, 
+        "answers": {
+            "1": "first",
+            "2": "oxygen",
+            "3": "29 miles per second"
+        }, 
+        "choices": {
+            "1": {
+                "a": "first",
+                "b": "second",
+                "c": "third"
+            },
+            "2": {
+                "a": "hydrogen",
+                "b": "mercury",
+                "c": "oxygen"
+            },
+            "3": {
+                "a": "29 miles per second",
+                "b": "290 miles per second",
+                "c": "2900 miles per second"
+            }
+        }
+    }
+}
