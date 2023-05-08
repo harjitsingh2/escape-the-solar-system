@@ -2,7 +2,8 @@
 import Planet from './scripts/planet.js';
 // import Question from './scripts/question.js';
 import Information from './scripts/info.js';
-import './scripts/mercury.js'
+// import './scripts/mercury.js'
+import './scripts/venus.js'
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     console.log('hello world')
