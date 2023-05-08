@@ -7,17 +7,14 @@ class Question {
     }  
     
 }
+const quizForm = document.getElementById("quiz-form")
 const questions = document.getElementById("myquestions"); 
 
-// this allows us to draw stuff on it
 const ctx = questions.getContext("2d");
-
+// header
 ctx.font = "bold 50px serif";
 ctx.fillText("Questions", 150, 50);
 
-// let mercuryQuestion = (infoObject)[0].questions[0];
-// ctx.font = "20px serif"
-// ctx.fillText(mercuryQuestion, 0, 200);
 
 let mercuryQuestions = infoObject[0].questions;
 let mercuryChoices = infoObject[0].choices
@@ -25,7 +22,7 @@ let mercuryChoices = infoObject[0].choices
 function displayQuiz() {
     let offsetY = 100;
 
-    for( let i = 0; i < mercuryChoices.length; i++) {
+    for (let i = 0; i < mercuryChoices.length; i++) {
         mercuryQuestions[i].forEach((question) => {
             ctx.font = "12px serif";
             ctx.fillText(question, 50, offsetY);
@@ -35,6 +32,16 @@ function displayQuiz() {
             ctx.font = "12px serif";
             ctx.fillText(choice.text, 70, offsetY);
             offsetY += 20;
+
+        questions.addEventListener("click", function(event) {
+            const rect = questions.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            if (x >= 70 && x <= 200 && y >= offsetY - 20 && y <= offsetY) {
+                quizForm.elements[`q${index}`].value = answer.text;
+            }
+        })
         })
         offsetY += 20;
 
@@ -43,10 +50,35 @@ function displayQuiz() {
     console.log("questions loaded");
 }
 
+// navigation
+// const nav = document.getElementById("mynav"); 
+// const navctx = nav.getContext("2d");
 
-displayQuiz();
+function submitQuiz(event) {
+    event.preventDefault();
+
+    let lives = 3;
+
+    for( let i = 0; i < mercuryChoices.length; i++) {
+    mercuryQuestions[i].forEach((question, index) => {
+        const selectedAnswer = quizForm.elements[`q${index}`].value;
+
+        if (selectedAnswer !== question.choices.find(choice => choice.correct).text) {
+            lives--;
+        }
+    })
+    }
+
+    // navctx.clearRect(0, 0, canvas.width, canvas.height);
+    // navctx.font = "16px serif";
+    // navctx.fillText(`Lives Remaining: ${lives}`, 50, 50); 
     
+}
 
+quizForm.addEventListener("submit", submitQuiz);
+window.addEventListener("load", displayQuiz);
+
+    
 
 
 

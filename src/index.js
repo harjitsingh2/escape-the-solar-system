@@ -23,6 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // venus
     let venus = new Planet;
-    //venus.makeVenus(ctx);
+    // venus.makeVenus(ctx);
 
 })

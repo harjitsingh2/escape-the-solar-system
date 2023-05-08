@@ -8,11 +8,6 @@
             ["What is Mercury's exosphere primarily composed of?"],
             ["How fast does Mercury travel?"]
         ], 
-        "answers": {
-            "1": "first",
-            "2": "oxygen",
-            "3": "29 miles per second"
-        }, 
         "choices": [
             [
                 { "text": "first", "correct": true},
@@ -30,6 +25,35 @@
                 { "text": "29 miles per second", "correct": true},
                 { "text": "290 miles per second", "correct": false},
                 { "text": "2900 miles per second", "correct": false}
+
+            ]
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Venus",
+        "information": "Venus, aka 'Earth's twin', has a size and structure similar to Earth. But it has a dense and toxic atmosphere filled with carbon dioxide and sulfuric acid which has led to extreme surface heat. Venus rotates very slowly. One day on Venus is 243 Earth days and one year is 225 Earth days. Meaning that a Venusian day is longer than a year! Additionally, Venus rotates in the opposite direction of most planets. It is quite the oddball.", 
+        "questions": [
+            ["Venus is the hottest planet in our solar system"],
+            ["Approximately how long is one day on Venus?"],
+            ["Which of these can be found in Venus' atmosphere?"]
+        ], 
+        "choices": [
+            [
+                { "text": "true", "correct": true},
+                { "text": "false", "correct": false}
+
+            ],
+            [
+                { "text": "1 Earth day", "correct": false},
+                { "text": "100 Earth days", "correct": false},
+                { "text": "200 Earth days", "correct": true}
+
+            ],
+            [
+                { "text": "oxygen", "correct": false},
+                { "text": "ozone", "correct": false},
+                { "text": "sulfuric acid", "correct": true}
 
             ]
         ]
