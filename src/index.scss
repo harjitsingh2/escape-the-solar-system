@@ -11,3 +11,41 @@ h1 {
     font-family: monospace;
     background-color: rgb(56, 56, 189);
 }
+
+.slide {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  .active-slide {
+    opacity: 1;
+    z-index: 2;
+  }
+  .quiz-container {
+    position: relative;
+    height: 50px;
+    margin-top: 40px;
+    left: 30px;
+    background-color: rgb(66, 168, 110);
+  }
+
+// .quiz-container {
+//     left: 30px;
+//     background-color: rgb(66, 168, 110);
+// }
+
+#submit {
+    position: relative;
+    left: 30px;
+    background-color: rgb(186, 114, 114);
+}
+
+#next {
+    position: relative;
+    left: 30px;
+    background-color: rgb(109, 209, 220);
+}

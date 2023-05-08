@@ -57,8 +57,10 @@ function buildQuiz(){
   
         // add this question and its answers to the output array
         output.push(
-          `<div class="question"> ${currentQuestion.question} </div>
-          <div class="answers"> ${answers.join('')} </div>`
+          `<div class="slide">
+            <div class="question"> ${currentQuestion.question} </div>
+            <div class="answers"> ${answers.join('')} </div>
+          </div>`
         );
       }
     );
@@ -84,14 +86,43 @@ function showResults(){
   
       if(userAnswer !== currentQuestion.correctAnswer){
         lives--;
-        answerContainers[questionNumber].style.color = 'lightgreen';
-      } else {
         answerContainers[questionNumber].style.color = 'red';
+      } else {
+        answerContainers[questionNumber].style.color = 'lightgreen';
       }
     });
     resultsContainer.innerHTML = `You have ${lives} lives remaining`;
 }
 
+// function to create slides of questions
+function showSlide(n) {
+    slides[currentSlide].classList.remove('active-slide');
+    slides[n].classList.add('active-slide');
+    currentSlide = n;
+    submitButton.style.display = 'inline-block';
+    if(currentSlide === slides.length-1){
+      nextButton.style.display = 'none';
+      submitButton.style.display = 'inline-block';
+    }
+    else{
+      nextButton.style.display = 'inline-block';
+      submitButton.style.display = 'none';
+    }
+}
+
+function showNextSlide() {
+    showSlide(currentSlide + 1);
+}
+
 
 buildQuiz();
+
+// creating pagination
+const nextButton = document.getElementById("next");
+const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+showSlide(currentSlide);
+
 submitButton.addEventListener('click', showResults);
+nextButton.addEventListener("click", showNextSlide);
