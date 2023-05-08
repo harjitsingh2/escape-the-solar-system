@@ -10,8 +10,9 @@ import Information from './scripts/info.js';
 //     new Example(main)
 // })
 
-document.addEventListener('DOMContentLoaded', () => {
-    //console.log('planet loaded')
+
+// document.addEventListener('DOMContentLoaded', () => {
+//console.log('planet loaded')
     const planet = document.getElementById("myplanet");
     planet.width = 400;
     planet.height = 600;
@@ -25,4 +26,4 @@ document.addEventListener('DOMContentLoaded', () => {
     let venus = new Planet;
     // venus.makeVenus(ctx);
 
-})
+// })

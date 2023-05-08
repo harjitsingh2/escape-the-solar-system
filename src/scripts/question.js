@@ -19,24 +19,25 @@ ctx.fillText("Questions", 150, 50);
 const nav = document.getElementById("mynav"); 
 const navctx = nav.getContext("2d");
 
-
+// retrieve info from json file
 let mercuryQuestions = infoObject[0].questions;
 let mercuryChoices = infoObject[0].choices
 
+// display quiz form
 function displayQuiz() {
     let offsetY = 100;
 
     for (let i = 0; i < mercuryChoices.length; i++) {
         mercuryQuestions[i].forEach((question) => {
-            ctx.font = "12px serif";
-            ctx.fillText(question, 50, offsetY);
+            ctx.font = "bold 14px serif";
+            ctx.fillText(question, 30, offsetY);
             offsetY += 30;
 
         mercuryChoices[i].forEach(choice => {
-            ctx.font = "12px serif";
+            ctx.font = "14px serif";
             ctx.fillText(choice.text, 70, offsetY);
             offsetY += 20;
-            // choice.addEventListener("click", e => {
+            // choice.addEventListener("click", () => {
             //     console.log(`${choice} selected`);
             // })
 
@@ -50,7 +51,7 @@ function displayQuiz() {
 }
 
 
-
+// submit quiz
 function submitQuiz(event) {
     event.preventDefault();
 
@@ -60,9 +61,6 @@ function submitQuiz(event) {
     mercuryQuestions[i].forEach((question, index) => {
         const selectedAnswer = quizForm.elements[`q${index}`].value;
 
-        // if (selectedAnswer !== question.choices.find(choice => choice.correct).text) {
-        //     lives--;
-        // }
         if (selectedAnswer !== mercuryChoices.find(correct => correct === true).text) {
             lives--;
         }
@@ -70,8 +68,7 @@ function submitQuiz(event) {
     }
 
     navctx.font = "16px serif";
-    navctx.fillText("Lives Remaining:"); 
-    // navctx.fillText(`Lives Remaining: ${lives}`, 50, 50); 
+    navctx.fillText(`Lives Remaining: ${lives}`, 50, 50); 
     
 }
 
