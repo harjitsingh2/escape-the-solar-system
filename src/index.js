@@ -1,7 +1,8 @@
 // import Example from './scripts/example';
 import Planet from './scripts/planet.js';
-import Question from './scripts/question.js';
+// import Question from './scripts/question.js';
 import Information from './scripts/info.js';
+import './scripts/mercury.js'
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     console.log('hello world')
@@ -19,7 +20,7 @@ import Information from './scripts/info.js';
 
     const ctx = planet.getContext("2d");
     let mercury = new Planet;
-    //mercury.draw(ctx);
+    // mercury.draw(ctx);
     mercury.makeMercury(ctx);
 
     // venus

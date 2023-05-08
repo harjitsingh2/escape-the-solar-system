@@ -13,7 +13,7 @@ const questions = document.getElementById("myquestions");
 const ctx = questions.getContext("2d");
 // header
 ctx.font = "bold 50px serif";
-ctx.fillText("Questions", 150, 50);
+ctx.fillText("Questions", 90, 50);
 
 // navigation
 const nav = document.getElementById("mynav"); 

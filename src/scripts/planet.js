@@ -33,7 +33,7 @@ class Planet {
     // draw circle onto canvas
     draw(ctx) {
         ctx.font = "bold 50px serif";
-        ctx.fillText("Planet 1", 150, 50);
+        ctx.fillText("Mercury", 100, 50);
         // create a circle
         ctx.beginPath();
         ctx.arc(200, 250, 100, 0, 2 * Math.PI, true)
