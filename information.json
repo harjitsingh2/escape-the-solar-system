@@ -4,9 +4,9 @@
         "name": "Mercury",
         "information": "Mercury might be the smallest planet in our solar system, but it is also the fastest - traveling 29 miles per second! This is due to its proximity to the Sun. Even though it is so close to the Sun, it is not the hottest planet in our solar system. Venus is actually the hottest. Mercury has no rings or moons. The small, terestrial planet does not have an atmosphere. It does have a thin exosphere made of oxygen, sodium, hydrogen, helium, and potassium, in descending order.", 
         "questions": [
-            "Mercury is the _______ planet from the Sun",
-            "What is Mercury's exosphere primarily composed of?",
-            "How fast does Mercury travel?"
+            ["Mercury is the _______ planet from the Sun"],
+            ["What is Mercury's exosphere primarily composed of?"],
+            ["How fast does Mercury travel?"]
         ], 
         "answers": {
             "1": "first",
@@ -14,21 +14,24 @@
             "3": "29 miles per second"
         }, 
         "choices": [
-            {
-                "a": ["first", true],
-                "b": ["second", false],
-                "c": ["third", false]
-            },
-            {
-                "a": ["hydrogen", false],
-                "b": ["mercury", false],
-                "c": ["oxygen", true]
-            },
-            {
-                "a": ["29 miles per second", true],
-                "b": ["290 miles per second", false],
-                "c": ["2900 miles per second", false]
-            }
+            [
+                { "text": "first", "correct": true},
+                { "text": "second", "correct": false},
+                { "text": "third", "correct": false}
+
+            ],
+            [
+                { "text": "hydrogen", "correct": false},
+                { "text": "mercury", "correct": false},
+                { "text": "oxygen", "correct": true}
+
+            ],
+            [
+                { "text": "29 miles per second", "correct": true},
+                { "text": "290 miles per second", "correct": false},
+                { "text": "2900 miles per second", "correct": false}
+
+            ]
         ]
     }
 ]
