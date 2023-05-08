@@ -15,6 +15,10 @@ const ctx = questions.getContext("2d");
 ctx.font = "bold 50px serif";
 ctx.fillText("Questions", 150, 50);
 
+// navigation
+const nav = document.getElementById("mynav"); 
+const navctx = nav.getContext("2d");
+
 
 let mercuryQuestions = infoObject[0].questions;
 let mercuryChoices = infoObject[0].choices
@@ -32,16 +36,11 @@ function displayQuiz() {
             ctx.font = "12px serif";
             ctx.fillText(choice.text, 70, offsetY);
             offsetY += 20;
+            // choice.addEventListener("click", e => {
+            //     console.log(`${choice} selected`);
+            // })
 
-        questions.addEventListener("click", function(event) {
-            const rect = questions.getBoundingClientRect();
-            const x = event.clientX - rect.left;
-            const y = event.clientY - rect.top;
 
-            if (x >= 70 && x <= 200 && y >= offsetY - 20 && y <= offsetY) {
-                quizForm.elements[`q${index}`].value = answer.text;
-            }
-        })
         })
         offsetY += 20;
 
@@ -50,27 +49,28 @@ function displayQuiz() {
     console.log("questions loaded");
 }
 
-// navigation
-// const nav = document.getElementById("mynav"); 
-// const navctx = nav.getContext("2d");
+
 
 function submitQuiz(event) {
     event.preventDefault();
 
     let lives = 3;
 
-    for( let i = 0; i < mercuryChoices.length; i++) {
+    for (let i = 0; i < mercuryChoices.length; i++) {
     mercuryQuestions[i].forEach((question, index) => {
         const selectedAnswer = quizForm.elements[`q${index}`].value;
 
-        if (selectedAnswer !== question.choices.find(choice => choice.correct).text) {
+        // if (selectedAnswer !== question.choices.find(choice => choice.correct).text) {
+        //     lives--;
+        // }
+        if (selectedAnswer !== mercuryChoices.find(correct => correct === true).text) {
             lives--;
         }
     })
     }
 
-    // navctx.clearRect(0, 0, canvas.width, canvas.height);
-    // navctx.font = "16px serif";
+    navctx.font = "16px serif";
+    navctx.fillText("Lives Remaining:"); 
     // navctx.fillText(`Lives Remaining: ${lives}`, 50, 50); 
     
 }
