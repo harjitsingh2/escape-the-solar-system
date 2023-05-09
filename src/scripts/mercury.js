@@ -97,7 +97,8 @@ function showResults(){
     let showAnswers = quizContainer.querySelector('.slide');
     
     // how can I set the opacity to 10 after we show results?
-    showAnswers.opacity = 10;
+    showAnswers.style.opacity = 10;
+    resultsContainer.style.opacity = 10;
     resultsContainer.innerHTML = `Yours score: ${score} / ${(questions.length-1)}`;
 }
 
