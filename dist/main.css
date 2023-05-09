@@ -63,6 +63,11 @@ h1 {
   font-size: 20px;
 }
 
+#next-planet {
+  background-color: rgb(128, 126, 0);
+  font-size: 20px;
+}
+
 #quiz {
   font-size: 20px;
 }

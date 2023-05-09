@@ -1,6 +1,9 @@
 // array of questions and answer objects
 let questions = [
-    {
+  {
+    question: "Venus, aka 'Earth's twin', has a size and structure similar to Earth. But it has a dense and toxic atmosphere filled with carbon dioxide and sulfuric acid which has led to extreme surface heat. Venus rotates very slowly. One day on Venus is 243 Earth days and one year is 225 Earth days. Meaning that a Venusian day is longer than a year! Additionally, Venus rotates in the opposite direction of most planets. It is quite the oddball."
+  },  
+  {
         question: "Venus is the hottest planet in our solar system",
         answers: {
             a: "true",

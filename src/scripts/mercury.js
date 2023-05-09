@@ -36,6 +36,7 @@ let questions = [
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
+const planetButton = document.getElementById('next-planet');
 
 // create our game quiz
 function buildQuiz(){
@@ -112,14 +113,17 @@ function showSlide(n) {
         startButton.style.display = 'inline-block';
         nextButton.style.display = 'none';
         submitButton.style.display = 'none';
+        planetButton.style.display = 'none';
     } else if (currentSlide === slides.length-1) {
         startButton.style.display = 'none';
         nextButton.style.display = 'none';
         submitButton.style.display = 'inline-block';
+        planetButton.style.display = 'inline-block';
     } else {
       nextButton.style.display = 'inline-block';
       submitButton.style.display = 'none';
       startButton.style.display = 'none';
+      planetButton.style.display = 'none';
     }
 }
 

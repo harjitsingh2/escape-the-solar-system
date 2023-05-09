@@ -33,15 +33,23 @@ function makePlanet1() {
 }
 makePlanet1();
 
+// functionality for next planet button
+
+function nextPlanet() {
+
+}
+
+submitButton.addEventListener('click', nextPlanet);
+
 
 let venus = new Planet;
 
-function makePlanet2() {
-    const planet = document.getElementById("myplanet");
-    planet.width = 400;
-    planet.height = 600;
-    const ctx = planet.getContext("2d"); 
-    venus.makeVenus(ctx);
-}
-makePlanet2();
+// function makePlanet2() {
+//     const planet = document.getElementById("myplanet");
+//     planet.width = 400;
+//     planet.height = 600;
+//     const ctx = planet.getContext("2d"); 
+//     venus.makeVenus(ctx);
+// }
+// makePlanet2();
 
