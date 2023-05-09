@@ -2,8 +2,8 @@
 import Planet from './scripts/planet.js';
 // import Question from './scripts/question.js';
 import Information from './scripts/info.js';
-// import './scripts/mercury.js'
-import './scripts/venus.js'
+import './scripts/mercury.js'
+// import './scripts/venus.js'
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     console.log('hello world')
@@ -29,3 +29,9 @@ import './scripts/venus.js'
     // venus.makeVenus(ctx);
 
 // })
+
+const submitButton = document.getElementById('submit');
+
+submitButton.addEventListener("click", () => {
+    console.log("Quiz has been submitted");
+})

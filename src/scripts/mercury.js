@@ -76,7 +76,7 @@ function showResults(){
     const answerContainers = quizContainer.querySelectorAll('.answers');
   
     // keep track of user's lives
-    let lives = 3;
+    let score = 0;
   
     // find answer for each question
     questions.forEach( (currentQuestion, questionNumber) => {
@@ -84,14 +84,14 @@ function showResults(){
       const selector = `input[name=question${questionNumber}]:checked`;
       const userAnswer = (answerContainer.querySelector(selector) || {}).value;
   
-      if(userAnswer !== currentQuestion.correctAnswer){
-        lives--;
-        answerContainers[questionNumber].style.color = 'red';
-      } else {
+      if(userAnswer === currentQuestion.correctAnswer){
+        score++;
         answerContainers[questionNumber].style.color = 'lightgreen';
+      } else {
+        answerContainers[questionNumber].style.color = 'red';
       }
     });
-    resultsContainer.innerHTML = `You have ${lives} lives remaining`;
+    resultsContainer.innerHTML = `Yours score: ${score} / ${questions.length}`;
 }
 
 // function to create slides of questions
