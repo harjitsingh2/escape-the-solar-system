@@ -1,6 +1,9 @@
 // array of questions and answer objects
 let questions = [
     {
+        question: "Mercury might be the smallest planet in our solar system, but it is also the fastest - traveling 29 miles per second! This is due to its proximity to the Sun. Even though it is so close to the Sun, it is not the hottest planet in our solar system. Venus is actually the hottest. Mercury has no rings or moons. The small, terrestrial planet does not have an atmosphere. It does have a thin exosphere made of oxygen, sodium, hydrogen, helium, and potassium, in descending order."
+    },
+    {
         question: "Mercury is the _______ planet from the Sun",
         answers: {
             a: "first",
@@ -76,7 +79,7 @@ function showResults(){
     const answerContainers = quizContainer.querySelectorAll('.answers');
   
     // keep track of user's lives
-    let score = 0;
+    let score = -1;
   
     // find answer for each question
     questions.forEach( (currentQuestion, questionNumber) => {
@@ -91,7 +94,11 @@ function showResults(){
         answerContainers[questionNumber].style.color = 'red';
       }
     });
-    resultsContainer.innerHTML = `Yours score: ${score} / ${questions.length}`;
+    let showAnswers = quizContainer.querySelector('.slide');
+    
+    // how can I set the opacity to 10 after we show results?
+    showAnswers.opacity = 10;
+    resultsContainer.innerHTML = `Yours score: ${score} / ${(questions.length-1)}`;
 }
 
 // function to create slides of questions
@@ -99,14 +106,19 @@ function showSlide(n) {
     slides[currentSlide].classList.remove('active-slide');
     slides[n].classList.add('active-slide');
     currentSlide = n;
-    submitButton.style.display = 'inline-block';
-    if(currentSlide === slides.length-1){
-      nextButton.style.display = 'none';
-      submitButton.style.display = 'inline-block';
-    }
-    else{
+    // submitButton.style.display = 'inline-block';
+    if(currentSlide === 0){
+        startButton.style.display = 'inline-block';
+        nextButton.style.display = 'none';
+        submitButton.style.display = 'none';
+    } else if (currentSlide === slides.length-1) {
+        startButton.style.display = 'none';
+        nextButton.style.display = 'none';
+        submitButton.style.display = 'inline-block';
+    } else {
       nextButton.style.display = 'inline-block';
       submitButton.style.display = 'none';
+      startButton.style.display = 'none';
     }
 }
 
@@ -118,6 +130,7 @@ function showNextSlide() {
 buildQuiz();
 
 // creating pagination
+const startButton = document.getElementById("start");
 const nextButton = document.getElementById("next");
 const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
@@ -125,4 +138,5 @@ let currentSlide = 0;
 showSlide(currentSlide);
 
 submitButton.addEventListener('click', showResults);
+startButton.addEventListener("click", showNextSlide);
 nextButton.addEventListener("click", showNextSlide);

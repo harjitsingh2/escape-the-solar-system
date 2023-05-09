@@ -11,16 +11,22 @@
     </head>
     <body>
         <h1>Escape the Solar System!</h1>
-        <div id="main"></div>
-        <canvas id="myplanet" style="border: 2px solid black;"></canvas>
-        <canvas id="myinfo" width="400" height="600" style="border: 2px solid black;"></canvas>
-        <div class="quiz-container">
-            <div id="quiz"></div>
+        <!-- <div id="main"></div> -->
+        <div class="planet">
+            <canvas id="myplanet" style="border: 2px solid black;"></canvas>
+            <!-- <canvas id="myinfo" width="400" height="600" style="border: 2px solid black;"></canvas> -->
+            <div class="quiz-container">
+                <div id="quiz"></div>
+                
+                <button type="submit" id="start">Start Quiz</button>
+                <br>
+                <button type="submit" id="submit">Submit Answers</button>
+                <br>
+                <button type="submit" id="next">Next Question</button>
+                <div id="results"></div>
+            </div>  
         </div>
-        <button type="submit" id="submit">Submit Answers</button>
-        <br>
-        <button type="submit" id="next">Next Question</button>
-        <div id="results"></div>
         <!-- <canvas id="mynav" width="100" height="600" style="border: 2px solid black;"></canvas> -->
     </body>
 </html>
+

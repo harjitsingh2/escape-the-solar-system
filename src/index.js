@@ -1,7 +1,7 @@
 // import Example from './scripts/example';
 import Planet from './scripts/planet.js';
 // import Question from './scripts/question.js';
-import Information from './scripts/info.js';
+// import Information from './scripts/info.js';
 import './scripts/mercury.js'
 // import './scripts/venus.js'
 
