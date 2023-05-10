@@ -10,89 +10,97 @@ class Planet {
     
     // add Mercury to canvas
     makeMercury(ctx) {
-        ctx.font = "bold 50px serif";
-        ctx.fillText("Mercury", 150, 50);
+        ctx.font = "bold 40px serif";
+        ctx.fillStyle = "white";
+        ctx.fillText("Mercury", 110, 140);
         let base_image = new Image();
-        base_image.src = './src/images/mercury2.jpeg';
+        base_image.src = './src/images/mercury-color-transparent.png';
         base_image.onload = function() {
-            ctx.drawImage(base_image, 0, 100, 400, 400);
+            ctx.drawImage(base_image, -50, 150, 500, 500 * base_image.height / base_image.width);
         }
         console.log("Mercury created");
     }
     // add Venus to canvas
     makeVenus(ctx) {
-        ctx.font = "bold 50px serif";
-        ctx.fillText("Venus", 150, 50);
+        ctx.font = "bold 40px serif";
+        ctx.fillStyle = "white";
+        ctx.fillText("Venus", 110, 140);
         let base_image = new Image();
-        base_image.src = './src/images/venus.jpeg';
+        base_image.src = './src/images/venus-transparent.png';
         base_image.onload = function() {
-            ctx.drawImage(base_image, 0, 100, 400, 400);
+            ctx.drawImage(base_image, -50, 150, 400, 400 * base_image.height / base_image.width);
         }
         console.log("Venus created");
     }
 
     makeEarth(ctx) {
-        ctx.font = "bold 50px serif";
-        ctx.fillText("Earth", 150, 50);
+        ctx.font = "bold 40px serif";
+        ctx.fillStyle = "white";
+        ctx.fillText("Earth", 110, 140);
         let base_image = new Image();
-        base_image.src = './src/images/earth.jpeg';
+        base_image.src = './src/images/earth-transparent.png';
         base_image.onload = function() {
-            ctx.drawImage(base_image, 0, 100, 400, 400);
+            ctx.drawImage(base_image, -50, 150, 400, 400 * base_image.height / base_image.width);
         }
         console.log("Earth created");
     }
     
     makeMars(ctx) {
-        ctx.font = "bold 50px serif";
-        ctx.fillText("Mars", 150, 50);
+        ctx.font = "bold 40px serif";
+        ctx.fillStyle = "white";
+        ctx.fillText("Mars", 110, 140);
         let base_image = new Image();
-        base_image.src = './src/images/mars.jpg';
+        base_image.src = './src/images/mars-transparent.png';
         base_image.onload = function() {
-            ctx.drawImage(base_image, 0, 100, 400, 400);
+            ctx.drawImage(base_image, -50, 150, 600, 600 * base_image.height / base_image.width);
         }
         console.log("Mars created");
     }
 
     makeJupiter(ctx) {
-        ctx.font = "bold 50px serif";
-        ctx.fillText("Jupiter", 150, 50);
+        ctx.font = "bold 40px serif";
+        ctx.fillStyle = "white";
+        ctx.fillText("Jupiter", 110, 140);
         let base_image = new Image();
-        base_image.src = './src/images/jupiter.jpg';
+        base_image.src = './src/images/jupiter-transparent.png';
         base_image.onload = function() {
-            ctx.drawImage(base_image, 0, 100, 400, 400);
+            ctx.drawImage(base_image, -50, 150, 500, 500 * base_image.height / base_image.width);
         }
         console.log("Jupiter created");
     }
 
     makeSaturn(ctx) {
-        ctx.font = "bold 50px serif";
-        ctx.fillText("Saturn", 150, 50);
+        ctx.font = "bold 40px serif";
+        ctx.fillStyle = "white";
+        ctx.fillText("Saturn", 110, 140);
         let base_image = new Image();
-        base_image.src = './src/images/saturn.jpg';
+        base_image.src = './src/images/saturn-transparent.png';
         base_image.onload = function() {
-            ctx.drawImage(base_image, 0, 100, 400, 400);
+            ctx.drawImage(base_image, -50, 150, 500, 500 * base_image.height / base_image.width);
         }
         console.log("Saturn created");
     }
 
     makeUranus(ctx) {
-        ctx.font = "bold 50px serif";
-        ctx.fillText("Uranus", 150, 50);
+        ctx.font = "bold 40px serif";
+        ctx.fillStyle = "white";
+        ctx.fillText("Uranus", 110, 140);
         let base_image = new Image();
-        base_image.src = './src/images/uranus.jpg';
+        base_image.src = './src/images/uranus-transparent.png';
         base_image.onload = function() {
-            ctx.drawImage(base_image, 0, 100, 400, 400);
+            ctx.drawImage(base_image, -50, 150, 500, 500 * base_image.height / base_image.width);
         }
         console.log("Uranus created");
     }
 
     makeNeptune(ctx) {
-        ctx.font = "bold 50px serif";
-        ctx.fillText("Neptune", 150, 50);
+        ctx.font = "bold 40px serif";
+        ctx.fillStyle = "white";
+        ctx.fillText("Neptune", 110, 140);
         let base_image = new Image();
-        base_image.src = './src/images/neptune.jpg';
+        base_image.src = './src/images/neptune-transparent.png';
         base_image.onload = function() {
-            ctx.drawImage(base_image, 0, 100, 400, 400);
+            ctx.drawImage(base_image, -50, 150, 500, 500 * base_image.height / base_image.width);
         }
         console.log("Neptune created");
     }

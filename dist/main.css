@@ -8,16 +8,21 @@
 
 h1 {
   margin-top: 0;
+  text-align: center;
   font-size: 50px;
   font-weight: 800;
   color: white;
   font-family: monospace;
-  background-color: rgb(56, 56, 189);
+  background-image: url("../src/images/starry-background.avif");
 }
 
 .planet {
   display: flex;
   flex-direction: row;
+}
+
+#myplanet {
+  background-image: url("../src/images/starry-background.avif");
 }
 
 .quiz-container {
@@ -27,8 +32,12 @@ h1 {
   row-gap: 10px;
 }
 
+#quiz {
+  text-align: center;
+  align-content: center;
+}
+
 .slide {
-  left: 10px;
   top: 50px;
   width: 90%;
   z-index: 1;
@@ -78,4 +87,5 @@ nav {
   flex-direction: column;
   justify-content: space-evenly;
   width: 50%;
+  text-align: center;
 }
