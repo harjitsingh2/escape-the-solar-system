@@ -94,7 +94,7 @@ function showResults(){
     const answerContainers = quizContainer.querySelectorAll('.answers');
   
     // keep track of user's lives
-    // let score;
+    let score = 0
   
     // find answer for each question
     questions.forEach( (currentQuestion, questionNumber) => {

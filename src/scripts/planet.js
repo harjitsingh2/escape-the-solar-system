@@ -4,6 +4,7 @@ class Planet {
         this.ypos = ypos;
         this.radius = radius;
         this.color = color;
+        // this.score = 0;
         // this.name = name;
     }  
     

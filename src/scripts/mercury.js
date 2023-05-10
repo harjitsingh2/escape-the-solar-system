@@ -57,16 +57,16 @@ const planetButton = document.getElementById('next-planet');
 // create our game quiz
 function buildQuiz(){
     // store the HTML output
-    const output = [];
+    let output = [];
   
     questions.forEach(
       (currentQuestion, questionNumber) => {
         // store the list of possible answers
-        const answers = [];
+        let possibleAnswers = [];
   
         // add radio button for each possible answer and add to array 
         for(let letter in currentQuestion.answers){
-          answers.push(
+          possibleAnswers.push(
             `<label>
               <input type="radio" name="question${questionNumber}" value="${letter}">
               ${letter})
@@ -76,12 +76,27 @@ function buildQuiz(){
         }
   
         // add this question and its answers to the output array
-        output.push(
+        if (questionNumber === 0) {
+            output.push(
+                `<div class="slide active-slide">
+                  <div class="question"> ${currentQuestion.question} </div>
+                  <div class="answers"> ${possibleAnswers.join('')} </div>
+                </div>`)
+        } else {
+            output.push(
           `<div class="slide">
             <div class="question"> ${currentQuestion.question} </div>
-            <div class="answers"> ${answers.join('')} </div>
+            <div class="answers"> ${possibleAnswers.join('')} </div>
           </div>`
-        );
+        );  
+        }
+
+        // output.push(
+        //   `<div class="slide">
+        //     <div class="question"> ${currentQuestion.question} </div>
+        //     <div class="answers"> ${possibleAnswers.join('')} </div>
+        //   </div>`
+        // );
       }
     );
   
@@ -100,9 +115,9 @@ function showResults(){
   
     // find answer for each question
     questions.forEach( (currentQuestion, questionNumber) => {
-      const answerContainer = answerContainers[questionNumber];
-      const selector = `input[name=question${questionNumber}]:checked`;
-      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+      let answerContainer = answerContainers[questionNumber];
+      let selector = `input[name=question${questionNumber}]:checked`;
+      let userAnswer = (answerContainer.querySelector(selector) || {}).value;
   
       if(userAnswer === currentQuestion.correctAnswer){
         score++;
@@ -112,7 +127,7 @@ function showResults(){
       }
       return score;
     });
-    let showAnswers = quizContainer.querySelector('.slide');
+    const showAnswers = quizContainer.querySelector('.slide');
     
     // how can I set the opacity to 10 after we show results?
     showAnswers.style.opacity = 0;
@@ -122,10 +137,13 @@ function showResults(){
 
 // function to create slides of questions
 function showSlide(n) {
+    // debugger 
+    // slides[currentSlide].classList.remove('slide');
+    // slides[n].classList.add('slide');
     slides[currentSlide].classList.remove('active-slide');
     slides[n].classList.add('active-slide');
     currentSlide = n;
-    // submitButton.style.display = 'inline-block';
+    // debugger
     if(currentSlide === 0){
         startButton.style.display = 'inline-block';
         nextButton.style.display = 'none';
@@ -142,6 +160,7 @@ function showSlide(n) {
       startButton.style.display = 'none';
       planetButton.style.display = 'none';
     }
+
 }
 
 function showNextSlide() {
@@ -156,6 +175,7 @@ const startButton = document.getElementById("start");
 const nextButton = document.getElementById("next");
 const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
+// slides[currentSlide].classList.add('active-slide')
 
 showSlide(currentSlide);
 
