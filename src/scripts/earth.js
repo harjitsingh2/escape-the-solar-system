@@ -64,7 +64,7 @@ function buildQuiz(){
         const answers = [];
   
         // add radio button for each possible answer and add to array 
-        for(letter in currentQuestion.answers){
+        for(let letter in currentQuestion.answers){
           answers.push(
             `<label>
               <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -120,26 +120,26 @@ function showResults(){
 
 // function to create slides of questions
 function showSlide(n) {
-    slides[currentSlide].classList.remove('active-slide');
-    slides[n].classList.add('active-slide');
-    currentSlide = n;
-    // submitButton.style.display = 'inline-block';
-    if(currentSlide === 0){
-        startButton.style.display = 'inline-block';
-        nextButton.style.display = 'none';
-        submitButton.style.display = 'none';
-        planetButton.style.display = 'none';
-    } else if (currentSlide === slides.length-1) {
-        startButton.style.display = 'none';
-        nextButton.style.display = 'none';
-        submitButton.style.display = 'inline-block';
-        planetButton.style.display = 'inline-block';
-    } else {
-      nextButton.style.display = 'inline-block';
+  slides[currentSlide].classList.remove('active-slide');
+  slides[n].classList.add('active-slide');
+  currentSlide = n;
+  // submitButton.style.display = 'inline-block';
+  if(currentSlide === 0){
+      startButton.style.display = 'inline-block';
+      nextButton.style.display = 'none';
       submitButton.style.display = 'none';
-      startButton.style.display = 'none';
       planetButton.style.display = 'none';
-    }
+  } else if (currentSlide === slides.length-1) {
+      startButton.style.display = 'none';
+      nextButton.style.display = 'none';
+      submitButton.style.display = 'inline-block';
+      planetButton.style.display = 'inline-block';
+  } else {
+    nextButton.style.display = 'inline-block';
+    submitButton.style.display = 'none';
+    startButton.style.display = 'none';
+    planetButton.style.display = 'none';
+  }
 }
 
 function showNextSlide() {

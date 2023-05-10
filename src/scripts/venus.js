@@ -50,6 +50,7 @@ let questions = [
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
+const planetButton = document.getElementById('next-planet');
 
 // create our game quiz
 function buildQuiz(){
@@ -108,23 +109,32 @@ function showResults(){
         answerContainers[questionNumber].style.color = 'red';
       }
     });
+    
     resultsContainer.innerHTML = `Yours score: ${score} / ${questions.length}`;
 }
 
 // function to create slides of questions
 function showSlide(n) {
-    slides[currentSlide].classList.remove('active-slide');
-    slides[n].classList.add('active-slide');
-    currentSlide = n;
-    submitButton.style.display = 'inline-block';
-    if(currentSlide === slides.length-1){
+  slides[currentSlide].classList.remove('active-slide');
+  slides[n].classList.add('active-slide');
+  currentSlide = n;
+  // submitButton.style.display = 'inline-block';
+  if(currentSlide === 0){
+      startButton.style.display = 'inline-block';
+      nextButton.style.display = 'none';
+      submitButton.style.display = 'none';
+      planetButton.style.display = 'none';
+  } else if (currentSlide === slides.length-1) {
+      startButton.style.display = 'none';
       nextButton.style.display = 'none';
       submitButton.style.display = 'inline-block';
-    }
-    else{
-      nextButton.style.display = 'inline-block';
-      submitButton.style.display = 'none';
-    }
+      planetButton.style.display = 'inline-block';
+  } else {
+    nextButton.style.display = 'inline-block';
+    submitButton.style.display = 'none';
+    startButton.style.display = 'none';
+    planetButton.style.display = 'none';
+  }
 }
 
 function showNextSlide() {
@@ -135,6 +145,7 @@ function showNextSlide() {
 buildQuiz();
 
 // creating pagination
+const startButton = document.getElementById("start");
 const nextButton = document.getElementById("next");
 const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
@@ -142,4 +153,5 @@ let currentSlide = 0;
 showSlide(currentSlide);
 
 submitButton.addEventListener('click', showResults);
+startButton.addEventListener("click", showNextSlide);
 nextButton.addEventListener("click", showNextSlide);
