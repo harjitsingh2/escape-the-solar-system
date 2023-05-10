@@ -1,3 +1,18 @@
+// import Planet from './planet.js';
+
+// let venus = new Planet;
+
+// function makePlanet2() {
+//     const planet = document.getElementById("myplanet");
+//     planet.width = 400;
+//     planet.height = 600;
+//     const ctx = planet.getContext("2d"); 
+//     venus.makeVenus(ctx);
+// }
+// makePlanet2();
+
+console.log("Welcome to Venus");
+
 // array of questions and answer objects
 let questions = [
   {

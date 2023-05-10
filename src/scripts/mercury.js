@@ -1,3 +1,18 @@
+// import Planet from './planet.js';
+
+console.log("Welcome to Mercury");
+
+// let mercury = new Planet;
+
+// function makePlanet1() {
+//     const planet = document.getElementById("myplanet");
+//     planet.width = 400;
+//     planet.height = 600;
+//     const ctx = planet.getContext("2d"); 
+//     mercury.makeMercury(ctx);
+// }
+// makePlanet1();
+
 // array of questions and answer objects
 let questions = [
     {

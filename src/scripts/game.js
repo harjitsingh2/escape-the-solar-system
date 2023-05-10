@@ -1,55 +1,29 @@
-import Planet from './planet.js';
-import './mercury.js'
+// import Planet from './planet.js';
+// import './mercury.js'
 // import './venus.js'
 
+
+const planetFiles = ['./mercury.js', './venus.js']
+
+let currentPlanetIndex = 0;
 console.log("Begin game")
 
 
-const submitButton = document.getElementById('submit');
 
-submitButton.addEventListener("click", () => {
-console.log("Quiz has been submitted");
+function loadPlanet(currentPlanetIndex) {
+
+    import(`${planetFiles[currentPlanetIndex]}`)
+
+    console.log(`planet loaded inside loadPlanet`);
+}
+
+const planetButton = document.getElementById('next-planet');
+
+planetButton.addEventListener('click', () => {
+    currentPlanetIndex++;
+    if (currentPlanetIndex < planetFiles.length) {
+        loadPlanet(currentPlanetIndex);
+    }
 })
 
-
-/*
-plan for loading new planets:
-1. create a table of planets
-// const planets = [mercury, venus];
-2. when beginning game, start at planets[0]
-3. create a button for "Go to next planet"
-4. add event listener on that button to render planets[1] and remove planets[0]
-
-*/
-
-let mercury = new Planet;
-
-function makePlanet1() {
-    const planet = document.getElementById("myplanet");
-    planet.width = 400;
-    planet.height = 600;
-    const ctx = planet.getContext("2d"); 
-    mercury.makeMercury(ctx);
-}
-makePlanet1();
-
-// functionality for next planet button
-
-function nextPlanet() {
-
-}
-
-submitButton.addEventListener('click', nextPlanet);
-
-
-let venus = new Planet;
-
-// function makePlanet2() {
-//     const planet = document.getElementById("myplanet");
-//     planet.width = 400;
-//     planet.height = 600;
-//     const ctx = planet.getContext("2d"); 
-//     venus.makeVenus(ctx);
-// }
-// makePlanet2();
-
+loadPlanet(currentPlanetIndex);
