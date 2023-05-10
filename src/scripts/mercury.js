@@ -65,7 +65,7 @@ function buildQuiz(){
         const answers = [];
   
         // add radio button for each possible answer and add to array 
-        for(letter in currentQuestion.answers){
+        for(let letter in currentQuestion.answers){
           answers.push(
             `<label>
               <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -114,7 +114,7 @@ function showResults(){
     let showAnswers = quizContainer.querySelector('.slide');
     
     // how can I set the opacity to 10 after we show results?
-    showAnswers.style.opacity = 10;
+    showAnswers.style.opacity = 0;
     resultsContainer.style.opacity = 10;
     resultsContainer.innerHTML = `Yours score: ${score} / ${(questions.length-1)}`;
 }

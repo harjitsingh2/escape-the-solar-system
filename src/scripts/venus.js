@@ -1,15 +1,15 @@
-// import Planet from './planet.js';
+import Planet from './planet.js';
 
-// let venus = new Planet;
+let venus = new Planet;
 
-// function makePlanet2() {
-//     const planet = document.getElementById("myplanet");
-//     planet.width = 400;
-//     planet.height = 600;
-//     const ctx = planet.getContext("2d"); 
-//     venus.makeVenus(ctx);
-// }
-// makePlanet2();
+function makePlanet() {
+    const planet = document.getElementById("myplanet");
+    planet.width = 400;
+    planet.height = 600;
+    const ctx = planet.getContext("2d"); 
+    venus.makeVenus(ctx);
+}
+makePlanet();
 
 console.log("Welcome to Venus");
 
@@ -62,7 +62,7 @@ function buildQuiz(){
         const answers = [];
   
         // add radio button for each possible answer and add to array 
-        for(letter in currentQuestion.answers){
+        for(let letter in currentQuestion.answers){
           answers.push(
             `<label>
               <input type="radio" name="question${questionNumber}" value="${letter}">
