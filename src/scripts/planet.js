@@ -12,7 +12,7 @@ class Planet {
         ctx.font = "bold 50px serif";
         ctx.fillText("Mercury", 150, 50);
         let base_image = new Image();
-        base_image.src = './src/images/mercury.jpg';
+        base_image.src = './src/images/mercury2.jpeg';
         base_image.onload = function() {
             ctx.drawImage(base_image, 0, 100, 400, 400);
         }

@@ -78,12 +78,12 @@ var map = {
 	],
 	"./mercury": [
 		"./src/scripts/mercury.js",
-		7,
+		9,
 		"src_scripts_mercury_js"
 	],
 	"./mercury.js": [
 		"./src/scripts/mercury.js",
-		7,
+		9,
 		"src_scripts_mercury_js"
 	],
 	"./oldgame": [
