@@ -3,7 +3,7 @@
 // import './venus.js'
 
 
-const planetFiles = ['./mercury.js', './venus.js', './earth.js']
+const planetFiles = ['./mercury.js', './venus.js', './earth.js', './mars.js']
 
 let currentPlanetIndex = 0;
 console.log("Begin game")
