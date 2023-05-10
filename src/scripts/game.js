@@ -10,7 +10,6 @@ let currentPlanetIndex = 0;
 console.log("Begin game")
 
 
-
 function loadPlanet(currentPlanetIndex) {
 
     import(`${planetFiles[currentPlanetIndex]}`)

@@ -96,7 +96,7 @@ function showResults(){
     const answerContainers = quizContainer.querySelectorAll('.answers');
   
     // keep track of user's lives
-    let score = -1;
+    let score = 0;
   
     // find answer for each question
     questions.forEach( (currentQuestion, questionNumber) => {
@@ -110,6 +110,7 @@ function showResults(){
       } else {
         answerContainers[questionNumber].style.color = 'red';
       }
+      return score;
     });
     let showAnswers = quizContainer.querySelector('.slide');
     
