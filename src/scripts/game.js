@@ -1,19 +1,11 @@
-// import Planet from './planet.js';
-// import './mercury.js'
-// import './venus.js'
 
-
-// const planetFiles = ['./mercury.js', './venus.js']
-const planetFiles = ['./mercury.js', './venus.js', './earth.js', './mars.js']
+const planetFiles = ['./mercury.js', './venus.js', './earth.js', './mars.js'];
 
 let currentPlanetIndex = 0;
-console.log("Begin game")
+console.log("Begin game");
 
 function loadPlanet(currentPlanetIndex) {
-
-    import(`${planetFiles[currentPlanetIndex]}`)
-
-    console.log(`planet loaded inside loadPlanet`);
+    import(`${planetFiles[currentPlanetIndex]}`);    
 }
 
 const planetButton = document.getElementById('next-planet');

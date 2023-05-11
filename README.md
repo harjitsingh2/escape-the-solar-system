@@ -1,9 +1,11 @@
-# Escape the Solar System!!
+# Escape the Solar System!
 
-## Background 
-This project gives those who are curious about space the opportunity to explore our solar system. **Escape the Solar System** is a hybrid of a game and interactive demo where users are encouraged to learn and answer questions correctly about space facts.
 
-Hop into our spaceship and explore the outer reaches of our solar system. Starting at Mercury, you must correctly answer questions to reach the next planet. If you answer three questions incorrectly, you must restart. When you reach the end of the solar system, you will officially become an interstellar explore and more surprises await. 
+**Escape the Solar System!** gives those who are curious about space the opportunity to explore our solar system. **Escape the Solar System** is an educational game where users are encouraged to learn and answer questions correctly about space facts.
+
+Hop into our spaceship and explore the outer reaches of our solar system. Starting at Mercury, you must answer questions to reach the next planet. When you reach the end of the solar system, you will given an explorer badge based on how many points you accumulated during the game. 
+
+![](escape-the-solar-system-5-11-23.png)
 
 ---
 
@@ -14,6 +16,10 @@ In **Escape the Solar System**, users will be able to:
 - Read important facts and information about each planet
 - Answer questions about each planet via a clickable multiple choice list
 - Travel from one planet to the next
+    - To accomplish this, I added each planetary js file into an array. By using an event listener, I iterated through this array and loaded the succeeding planet when the user was ready to travel to it.
+    ![](loading-planets.png)
+
+
 
 In addition, this project will include:
 - Instructions on how to play the game
@@ -23,7 +29,7 @@ In addition, this project will include:
 
 ## Wireframes
 
-![](Wireframe.png)
+![](escape-wireframe.png)
 
 ---
 
@@ -46,7 +52,7 @@ In addition, this project will include:
     - Create game questions for first planet and logic for user input
 - Tuesday
     - Add pages for more planets
-    - Health and navigation bar
+    - Navigation bar
 - Wednesday
     - Styling and CSS
     - Bonus features
@@ -56,7 +62,15 @@ In addition, this project will include:
 
 ---
 
-## Bonus Features
-- Beatiful image from NASA when you escape the solar system
-- Music that can be muted
+## Future Implementations
+- Receive a badge when you escape the solar system
+- Add music that can be muted
+- Create animation to go from one planet to the next
+- Add animated planet images
+
+---
+
+## CC Licensing
+- Images from NASA and Unsplash
+- Link icons provided by Font Awesome
 
