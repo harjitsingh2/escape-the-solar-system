@@ -12,6 +12,7 @@ h1 {
     color: white;
     font-family: monospace;
     background-image: url('../src/images/starry-background.avif');
+    padding: 1.5%;
 }
 
 .planet {
@@ -90,7 +91,10 @@ h1 {
 }
 
 nav {
-    background-color: lightblue;
+    color: white;
+    // opacity: 50%;
+    background-image: url('../src/images/starry-background.avif');
+    
     display: flex;
     flex-direction: column;
     // align-content: flex-start;
