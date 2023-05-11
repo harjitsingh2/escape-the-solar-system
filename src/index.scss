@@ -26,9 +26,10 @@ h1 {
     flex-direction: row;
 }
 
-// #myplanet {
-//     // background-image: url('../src/images/starry-background.avif');
-// }
+h1:hover {
+    // background-image: url('../src/images/starry-background.avif');
+    color: rgb(93, 1, 93);
+}
 
 
 .quiz-container {
@@ -51,6 +52,10 @@ h1 {
     color: #ffffff;
     // font-family: monospace;
 }
+
+// #quiz:hover {
+//     font-size: larger;
+// }
 
 #results {
     color:#ffffff;
@@ -127,4 +132,8 @@ nav {
     font-size: 20px;
     color: white;
     background-color: blue;
+}
+
+.buttons:hover {
+    font-size: x-large;
 }

@@ -26,6 +26,10 @@ h1 {
   flex-direction: row;
 }
 
+h1:hover {
+  color: rgb(93, 1, 93);
+}
+
 .quiz-container {
   display: flex;
   flex-direction: column;
@@ -79,4 +83,8 @@ nav {
   font-size: 20px;
   color: white;
   background-color: blue;
+}
+
+.buttons:hover {
+  font-size: x-large;
 }
