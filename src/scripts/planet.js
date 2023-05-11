@@ -28,7 +28,7 @@ class Planet {
         let base_image = new Image();
         base_image.src = './src/images/venus-transparent.png';
         base_image.onload = function() {
-            ctx.drawImage(base_image, -50, 150, 400, 400 * base_image.height / base_image.width);
+            ctx.drawImage(base_image, 0, 150, 380, 380 * base_image.height / base_image.width);
         }
         console.log("Venus created");
     }
@@ -40,7 +40,7 @@ class Planet {
         let base_image = new Image();
         base_image.src = './src/images/earth-transparent.png';
         base_image.onload = function() {
-            ctx.drawImage(base_image, -50, 150, 400, 400 * base_image.height / base_image.width);
+            ctx.drawImage(base_image, 0, 150, 400, 400 * base_image.height / base_image.width);
         }
         console.log("Earth created");
     }
@@ -52,7 +52,7 @@ class Planet {
         let base_image = new Image();
         base_image.src = './src/images/mars-transparent.png';
         base_image.onload = function() {
-            ctx.drawImage(base_image, -50, 150, 600, 600 * base_image.height / base_image.width);
+            ctx.drawImage(base_image, -100, 140, 600, 600 * base_image.height / base_image.width);
         }
         console.log("Mars created");
     }
