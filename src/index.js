@@ -5,7 +5,10 @@
 // import './scripts/mercury.js'
 // import './scripts/venus.js'
 // var score = 0;
+// import '/Users/harjit/Desktop/escape-the-solar-system/welcome.html'
+// document.querySelector('planet').style.display = 'none';
 import './scripts/game.js'
+
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     console.log('hello world')

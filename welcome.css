@@ -1,0 +1,13 @@
+nav {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    text-align: center;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+}
