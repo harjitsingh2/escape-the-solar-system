@@ -56,16 +56,16 @@ const planetButton = document.getElementById('next-planet');
 // create our game quiz
 function buildQuiz(){
     // store the HTML output
-    const output = [];
+    let output = [];
   
     questions.forEach(
       (currentQuestion, questionNumber) => {
         // store the list of possible answers
-        const answers = [];
+        let possibleAnswers = [];
   
         // add radio button for each possible answer and add to array 
         for(let letter in currentQuestion.answers){
-          answers.push(
+          possibleAnswers.push(
             `<label>
               <input type="radio" name="question${questionNumber}" value="${letter}">
               ${letter})
@@ -75,12 +75,26 @@ function buildQuiz(){
         }
   
         // add this question and its answers to the output array
-        output.push(
+        // output.push(
+        //   `<div class="slide">
+        //     <div class="question"> ${currentQuestion.question} </div>
+        //     <div class="answers"> ${answers.join('')} </div>
+        //   </div>`
+        // );
+        if (questionNumber === 0) {
+          output.push(
+              `<div class="slide active-slide">
+                <div class="question"> ${currentQuestion.question} </div>
+                <div class="answers"> ${possibleAnswers.join('')} </div>
+              </div>`)
+        } else {
+            output.push(
           `<div class="slide">
             <div class="question"> ${currentQuestion.question} </div>
-            <div class="answers"> ${answers.join('')} </div>
+            <div class="answers"> ${possibleAnswers.join('')} </div>
           </div>`
-        );
+        );  
+        }
       }
     );
   
@@ -110,11 +124,9 @@ function showResults(){
         answerContainers[questionNumber].style.color = 'red';
       }
     });
-    let showAnswers = quizContainer.querySelector('.slide');
     
     // how can I set the opacity to 10 after we show results?
     score = score - 1;
-    showAnswers.style.opacity = 0;
     resultsContainer.style.opacity = 10;
     resultsContainer.innerHTML = `Your score: ${score} / 9`;
 
@@ -147,6 +159,9 @@ function showSlide(n) {
   }
 
   submitButton.addEventListener("click", () => {
+    slides[0].classList.add('active-slide');
+    slides[1].classList.add('active-slide');
+    slides[2].classList.add('active-slide');
     planetButton.style.display = 'inline-block';
     nextButton.style.display = 'none';
     submitButton.style.display = 'none';
