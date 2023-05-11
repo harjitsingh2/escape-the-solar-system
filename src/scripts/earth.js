@@ -95,7 +95,7 @@ function showResults(){
     const answerContainers = quizContainer.querySelectorAll('.answers');
   
     // keep track of user's lives
-    // let score = -1;
+    // let score = 0;
   
     // find answer for each question
     questions.forEach( (currentQuestion, questionNumber) => {
@@ -116,6 +116,10 @@ function showResults(){
     showAnswers.style.opacity = 0;
     resultsContainer.style.opacity = 10;
     resultsContainer.innerHTML = `Yours score: ${score} / 9`;
+
+    submitButton.removeEventListener('click', showResults);
+    startButton.removeEventListener("click", showNextSlide);
+    nextButton.removeEventListener("click", showNextSlide);
 }
 
 // function to create slides of questions

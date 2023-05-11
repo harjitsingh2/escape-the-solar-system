@@ -4,6 +4,7 @@
 // import Information from './scripts/info.js';
 // import './scripts/mercury.js'
 // import './scripts/venus.js'
+// var score = 0;
 import './scripts/game.js'
 
 // document.addEventListener('DOMContentLoaded', () => {

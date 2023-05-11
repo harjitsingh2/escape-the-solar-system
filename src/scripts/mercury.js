@@ -111,14 +111,14 @@ function showResults(){
     const answerContainers = quizContainer.querySelectorAll('.answers');
   
     // keep track of user's lives
-    let score = 0;
+    // let score = 0;
   
     // find answer for each question
     questions.forEach( (currentQuestion, questionNumber) => {
       let answerContainer = answerContainers[questionNumber];
       let selector = `input[name=question${questionNumber}]:checked`;
       let userAnswer = (answerContainer.querySelector(selector) || {}).value;
-  
+        // debugger;
       if(userAnswer === currentQuestion.correctAnswer){
         score++;
         answerContainers[questionNumber].style.color = 'lightgreen';
@@ -133,6 +133,10 @@ function showResults(){
     showAnswers.style.opacity = 0;
     resultsContainer.style.opacity = 10;
     resultsContainer.innerHTML = `Yours score: ${score} / ${(questions.length-1)}`;
+
+    submitButton.removeEventListener('click', showResults);
+    startButton.removeEventListener("click", showNextSlide);
+    nextButton.removeEventListener("click", showNextSlide);
 }
 
 // function to create slides of questions
@@ -140,7 +144,12 @@ function showSlide(n) {
     // debugger 
     // slides[currentSlide].classList.remove('slide');
     // slides[n].classList.add('slide');
-    slides[currentSlide].classList.remove('active-slide');
+    const slides = document.querySelectorAll(".slide");
+    const activeSlide = document.querySelector('.active-slide');
+    
+    if (activeSlide) {
+        activeSlide.classList.remove('active-slide');
+    }
     slides[n].classList.add('active-slide');
     currentSlide = n;
     // debugger
@@ -163,8 +172,14 @@ function showSlide(n) {
 
 }
 
+
 function showNextSlide() {
-    showSlide(currentSlide + 1);
+    if (currentSlide === 4) {
+        currentSlide = 0
+    } else {
+        currentSlide++
+    }
+    showSlide(currentSlide);
 }
 
 
@@ -173,7 +188,7 @@ buildQuiz();
 // creating pagination
 const startButton = document.getElementById("start");
 const nextButton = document.getElementById("next");
-const slides = document.querySelectorAll(".slide");
+// const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
 // slides[currentSlide].classList.add('active-slide')
 
