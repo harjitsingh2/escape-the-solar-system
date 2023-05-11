@@ -14,7 +14,9 @@ h1 {
     font-size: 60px;
     font-weight: 800;
     color: white;
-    font-family: monospace;
+    // font-family: monospace;
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
     // background-image: url('../src/images/starry-background.avif');
     padding: 2%;
 }
@@ -47,6 +49,7 @@ h1 {
     // text-align: center;
     align-content: center;
     color: #ffffff;
+    // font-family: monospace;
 }
 
 #results {

@@ -16,7 +16,8 @@ h1 {
   font-size: 60px;
   font-weight: 800;
   color: white;
-  font-family: monospace;
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
   padding: 2%;
 }
 

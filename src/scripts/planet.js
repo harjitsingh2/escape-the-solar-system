@@ -10,7 +10,7 @@ class Planet {
     
     // add Mercury to canvas
     makeMercury(ctx) {
-        ctx.font = "bold 40px serif";
+        ctx.font = "bold 40px monospace";
         ctx.fillStyle = "white";
         ctx.fillText("Mercury", 110, 140);
         let base_image = new Image();
@@ -22,7 +22,7 @@ class Planet {
     }
     // add Venus to canvas
     makeVenus(ctx) {
-        ctx.font = "bold 40px serif";
+        ctx.font = "bold 40px monospace";
         ctx.fillStyle = "white";
         ctx.fillText("Venus", 110, 140);
         let base_image = new Image();
@@ -34,7 +34,7 @@ class Planet {
     }
 
     makeEarth(ctx) {
-        ctx.font = "bold 40px serif";
+        ctx.font = "bold 40px monospace";
         ctx.fillStyle = "white";
         ctx.fillText("Earth", 110, 140);
         let base_image = new Image();
@@ -46,7 +46,7 @@ class Planet {
     }
     
     makeMars(ctx) {
-        ctx.font = "bold 40px serif";
+        ctx.font = "bold 40px monospace";
         ctx.fillStyle = "white";
         ctx.fillText("Mars", 110, 140);
         let base_image = new Image();
@@ -58,7 +58,7 @@ class Planet {
     }
 
     makeJupiter(ctx) {
-        ctx.font = "bold 40px serif";
+        ctx.font = "bold 40px monospace";
         ctx.fillStyle = "white";
         ctx.fillText("Jupiter", 110, 140);
         let base_image = new Image();
@@ -70,7 +70,7 @@ class Planet {
     }
 
     makeSaturn(ctx) {
-        ctx.font = "bold 40px serif";
+        ctx.font = "bold 40px monospace";
         ctx.fillStyle = "white";
         ctx.fillText("Saturn", 110, 140);
         let base_image = new Image();
@@ -82,7 +82,7 @@ class Planet {
     }
 
     makeUranus(ctx) {
-        ctx.font = "bold 40px serif";
+        ctx.font = "bold 40px monospace";
         ctx.fillStyle = "white";
         ctx.fillText("Uranus", 110, 140);
         let base_image = new Image();
@@ -94,7 +94,7 @@ class Planet {
     }
 
     makeNeptune(ctx) {
-        ctx.font = "bold 40px serif";
+        ctx.font = "bold 40px monospace";
         ctx.fillStyle = "white";
         ctx.fillText("Neptune", 110, 140);
         let base_image = new Image();
@@ -109,7 +109,7 @@ class Planet {
 
     // draw circle onto canvas
     draw(ctx) {
-        ctx.font = "bold 50px serif";
+        ctx.font = "bold 50px monospace";
         ctx.fillText("Mercury", 100, 50);
         // create a circle
         ctx.beginPath();
