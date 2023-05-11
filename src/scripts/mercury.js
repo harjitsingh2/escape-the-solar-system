@@ -90,13 +90,6 @@ function buildQuiz(){
           </div>`
         );  
         }
-
-        // output.push(
-        //   `<div class="slide">
-        //     <div class="question"> ${currentQuestion.question} </div>
-        //     <div class="answers"> ${possibleAnswers.join('')} </div>
-        //   </div>`
-        // );
       }
     );
   
@@ -109,9 +102,7 @@ function showResults(){
 
     // gather answer containers from our quiz
     const answerContainers = quizContainer.querySelectorAll('.answers');
-  
-    // keep track of user's lives
-    // let score = 0;
+
   
     // find answer for each question
     questions.forEach( (currentQuestion, questionNumber) => {
@@ -127,12 +118,13 @@ function showResults(){
       }
       return score;
     });
+    score = score - 1;
     const showAnswers = quizContainer.querySelector('.slide');
     
     // how can I set the opacity to 10 after we show results?
     showAnswers.style.opacity = 0;
     resultsContainer.style.opacity = 10;
-    resultsContainer.innerHTML = `Yours score: ${score} / ${(questions.length-1)}`;
+    resultsContainer.innerHTML = `Your score: ${score} / ${(questions.length-1)}`;
 
     submitButton.removeEventListener('click', showResults);
     startButton.removeEventListener("click", showNextSlide);
@@ -162,13 +154,21 @@ function showSlide(n) {
         startButton.style.display = 'none';
         nextButton.style.display = 'none';
         submitButton.style.display = 'inline-block';
-        planetButton.style.display = 'inline-block';
+        planetButton.style.display = 'none';
     } else {
       nextButton.style.display = 'inline-block';
       submitButton.style.display = 'none';
       startButton.style.display = 'none';
       planetButton.style.display = 'none';
     }
+
+    // display next planet and remove other buttons
+    submitButton.addEventListener("click", () => {
+        planetButton.style.display = 'inline-block';
+        nextButton.style.display = 'none';
+        submitButton.style.display = 'none';
+        startButton.style.display = 'none';
+    })
 
 }
 

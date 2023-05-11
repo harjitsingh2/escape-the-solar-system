@@ -113,9 +113,10 @@ function showResults(){
     let showAnswers = quizContainer.querySelector('.slide');
     
     // how can I set the opacity to 10 after we show results?
+    score = score - 1;
     showAnswers.style.opacity = 0;
     resultsContainer.style.opacity = 10;
-    resultsContainer.innerHTML = `Yours score: ${score} / 9`;
+    resultsContainer.innerHTML = `Your score: ${score} / 9`;
 
     submitButton.removeEventListener('click', showResults);
     startButton.removeEventListener("click", showNextSlide);
@@ -137,13 +138,20 @@ function showSlide(n) {
       startButton.style.display = 'none';
       nextButton.style.display = 'none';
       submitButton.style.display = 'inline-block';
-      planetButton.style.display = 'inline-block';
+      planetButton.style.display = 'none';
   } else {
     nextButton.style.display = 'inline-block';
     submitButton.style.display = 'none';
     startButton.style.display = 'none';
     planetButton.style.display = 'none';
   }
+
+  submitButton.addEventListener("click", () => {
+    planetButton.style.display = 'inline-block';
+    nextButton.style.display = 'none';
+    submitButton.style.display = 'none';
+    startButton.style.display = 'none';
+  })
 }
 
 function showNextSlide() {
