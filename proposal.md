@@ -1,4 +1,4 @@
-# Escape the Solar System!!
+# Escape the Solar System
 
 ## Background 
 This project gives those who are curious about space the opportunity to explore our solar system. **Escape the Solar System** is a hybrid of a game and interactive demo where users are encouraged to learn and answer questions correctly about space facts.
