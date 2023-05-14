@@ -5,7 +5,7 @@
 
 Hop into our spaceship and explore the outer reaches of our solar system. Starting at Mercury, you must answer questions to reach the next planet. When you reach the end of the solar system, you will given an explorer badge based on how many points you accumulated during the game. 
 
-[PLAY HERE](https://harjitsingh3.github.io/escape-the-solar-system/)
+[PLAY HERE](https://harjitsingh2.github.io/escape-the-solar-system/)
 
 ![](escape-the-solar-system-5-11-23.png)
 
