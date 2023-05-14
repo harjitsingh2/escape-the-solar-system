@@ -82,9 +82,13 @@ nav {
   text-align: center;
   font-size: 20px;
   color: white;
-  background-color: blue;
+  background-color: rgb(93, 1, 93);
 }
 
 .buttons:hover {
-  font-size: x-large;
+  font: black;
+}
+
+.nav-button:hover {
+  color: rgb(93, 1, 93);
 }
