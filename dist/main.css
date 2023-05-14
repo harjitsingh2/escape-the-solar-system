@@ -78,15 +78,17 @@ nav {
 .buttons {
   display: flex;
   flex-direction: row;
-  width: 25%;
   text-align: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 1%;
   font-size: 20px;
   color: white;
   background-color: rgb(93, 1, 93);
 }
 
 .buttons:hover {
-  font: black;
+  color: black;
 }
 
 .nav-button:hover {
