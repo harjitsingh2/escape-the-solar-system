@@ -1,4 +1,17 @@
 
+window.addEventListener('DOMContentLoaded', () => {
+    const welcomeContainer = document.getElementById('welcome');
+    const gameContainer = document.getElementById('planet');
+    const startButton = document.getElementById('begin-game');
+  
+    startButton.addEventListener('click', () => {
+      welcomeContainer.style.display = 'none';
+      gameContainer.classList.remove('hidden');
+      gameContainer.style.display = 'flex';
+    });
+  });
+  
+
 const planetFiles = ['./mercury.js', './venus.js', './earth.js', './mars.js'];
 
 let currentPlanetIndex = 0;
@@ -9,7 +22,7 @@ function loadPlanet(currentPlanetIndex) {
 }
 
 const planetButton = document.getElementById('next-planet');
-const body = document.querySelector('.planet');
+const body = document.querySelector('#planet');
 const transition = document.querySelector('#planet-transition');
 
 planetButton.addEventListener('click', () => {

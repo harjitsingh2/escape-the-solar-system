@@ -21,8 +21,45 @@ h1 {
   padding: 2%;
 }
 
-.planet {
+#welcome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+#instructions {
+  color: white;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+#begin-game {
+  color: white;
+  font-size: 30px;
+  background-color: #1a2c80;
+  border-radius: 50%;
+  width: fit-content;
+  height: fit-content;
+  padding: 2%;
+}
+
+.hidden {
+  display: none;
+}
+
+#game {
   flex-direction: row;
 }
 

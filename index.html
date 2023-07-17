@@ -18,41 +18,56 @@
         
     </head>
     <body>
-        <h1>Escape the Solar System!</h1>
-        <!-- <div id="main"></div> -->
-        <div class="planet" type="hidden">
-            <canvas id="myplanet"></canvas>
-            <!-- <canvas id="myplanet" style="border: 2px solid black;"></canvas> -->
-            <!-- <canvas id="myinfo" width="400" height="600" style="border: 2px solid black;"></canvas> -->
-            <div class="quiz-container">
-                <div id="quiz"></div>
-                <div id="results"></div>
-                <br>
-                <div class="buttons">
-                    <button class="button" type="submit" id="start">Answer Questions</button>
-                    <button class="button" type="submit" id="submit">Submit Answers</button>
-                    <button class="button" type="submit" id="next">Next Question</button>
-                    <button class="button" type="submit" id="next-planet">Go to Next Planet</button>
-                </div>
-            </div>  
-            <nav>
-                <div class="nav-button">
-                    <a href="https://harjitsingh2.github.io/escape-the-solar-system/"></i><i class="fa-solid fa-house fa-xl" ></i></a>
-                    <br><br>
-                    <a href="https://harjitsingh2.github.io/escape-the-solar-system/"></i>Home</a>
-                </div>
-                <div class="nav-button">
-                    <a href="https://github.com/harjitsingh2"><i class="fa-brands fa-github fa-xl"></i></a>
-                    <br><br>
-                    <a href="https://github.com/harjitsingh2">GitHub</a>
-                </div>
-                <div class="nav-button">
-                    <a href="https://www.linkedin.com/in/harjitsingh2/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-                    <br><br>
-                    <a href="https://www.linkedin.com/in/harjitsingh2/">LinkedIn</a>
-                </div>
-            </nav>
-        </div>
+            <h1>Escape the Solar System!</h1>
+            <div id="welcome">  
+                <p id="instructions">
+                    Welcome to the the wonderful world of interstellar travel! As an interstellar explorer,
+                    your goal is to escape our solar system so you can travel to other stars and planets.
+                    To escape the solar system, you will read and learn about each planet. Then, you must
+                    answer questions about each planet to earn fuel for your rocketship. You need to answer 
+                    20 questions correctly to earn enough fuel to escape the solar system. Good luck!
+                </p>
+                <br><br>
+                <br><br>
+                <button class="begin" type="submit" id="begin-game">Begin Game</button>
+                
+            </div>
+
+            <!-- <div id="main"></div> -->
+            <div id="planet" class="hidden">
+                <canvas id="myplanet"></canvas>
+                <!-- <canvas id="myplanet" style="border: 2px solid black;"></canvas> -->
+                <!-- <canvas id="myinfo" width="400" height="600" style="border: 2px solid black;"></canvas> -->
+                <div class="quiz-container">
+                    <div id="quiz"></div>
+                    <div id="results"></div>
+                    <br>
+                    <div class="buttons">
+                        <button class="button" type="submit" id="start">Answer Questions</button>
+                        <button class="button" type="submit" id="submit">Submit Answers</button>
+                        <button class="button" type="submit" id="next">Next Question</button>
+                        <button class="button" type="submit" id="next-planet">Go to Next Planet</button>
+                    </div>
+                </div>  
+                <nav>
+                    <div class="nav-button">
+                        <a href="https://harjitsingh2.github.io/escape-the-solar-system/"></i><i class="fa-solid fa-house fa-xl" ></i></a>
+                        <br><br>
+                        <a href="https://harjitsingh2.github.io/escape-the-solar-system/"></i>Home</a>
+                    </div>
+                    <div class="nav-button">
+                        <a href="https://github.com/harjitsingh2"><i class="fa-brands fa-github fa-xl"></i></a>
+                        <br><br>
+                        <a href="https://github.com/harjitsingh2">GitHub</a>
+                    </div>
+                    <div class="nav-button">
+                        <a href="https://www.linkedin.com/in/harjitsingh2/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                        <br><br>
+                        <a href="https://www.linkedin.com/in/harjitsingh2/">LinkedIn</a>
+                    </div>
+                </nav>
+            </div>
+        </body>
         <div id="planet-transition">Hang on tight! We are traveling to the next planet!</div>
     </body>
 </html>
