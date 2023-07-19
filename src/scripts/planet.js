@@ -105,6 +105,17 @@ class Planet {
         // console.log("Neptune created");
     }
 
+    makePluto(ctx) {
+        ctx.font = "bold 40px monospace";
+        ctx.fillStyle = "white";
+        ctx.fillText("Pluto", 110, 140);
+        let base_image = new Image();
+        base_image.src = './src/images/pluto-transparent.png';
+        base_image.onload = function() {
+            ctx.drawImage(base_image, -50, 150, 500, 500 * base_image.height / base_image.width);
+        }
+    }
+
 
 
     // draw circle onto canvas

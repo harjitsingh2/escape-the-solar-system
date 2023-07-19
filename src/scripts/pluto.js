@@ -1,49 +1,51 @@
 import Planet from './planet.js';
 
 
-let mars = new Planet;
+let pluto = new Planet;
 
 function makePlanet() {
     const planet = document.getElementById("myplanet");
     planet.width = 400;
     planet.height = 600;
     const ctx = planet.getContext("2d"); 
-    mars.makeMars(ctx);
+    pluto.makePluto(ctx);
 }
 makePlanet();
 
-// console.log("Welcome to Mars");
 
 // array of questions and answer objects
 let questions = [
-  {
-    question: "Mars is the only other planet that humans have explored with rovers, essentially making it our second home. Although Mars is mostly a cold and dusty desert, it does have incredible features like polar ice caps, extinct volcanoes, and canyons. Mars has no rings, but it does have two moons named Phobos and Deimos. There is no life currently on Mars. However, this doesn't rule out the possibility of there having been life on Mars."
-  }, 
-  {
-        question: "Is there water on Mars?",
-        answers: {
-            a: "no",
-            b: "yes"
-        },
-        correctAnswer: 'b'
-    },
     {
-        question: "How many moons does Mars have?",
-        answers: {
-            a: "0",
-            b: "1",
-            c: "2"
+        question: "Pluto is by far the most controversial celestial body in our solar system. Once a planet, Pluto has been 'demoted' to dwarf planet status. The main reason for this is that Pluto's orbit, size, and composition is more similar to other objects in the Kuiper Belt. So it was demoted, it simply changed teams. Interestingly, Pluto has its own team within its orbit. Pluto has 5 moons. The biggest moon, Charon, is almost the same size as Pluto. Again, although Pluto is now considered a 'dwarf planet', it is still a vital part of our solar system. Pluto is the last hurdle before you reach the outer ends of our solar system."
+      },  
+      {
+            question: "Is Pluto a planet?",
+            answers: {
+                a: "no",
+                b: "yes",
+                c: "YES",
+                d: "YESSS!!!"
+            },
+            correctAnswer: 'a'
         },
-        correctAnswer: 'c'
-    },
-    {
-        question: "Are there any living species on Mars?",
-        answers: {
-            a: "no",
-            b: "yes"
+        {
+            question: "Where in the solar system is Pluto located?",
+            answers: {
+                a: "Asteroid belt",
+                b: "Comet belt",
+                c: "Kuiper belt"
+            },
+            correctAnswer: 'c'
         },
-        correctAnswer: 'a'
-    }
+        {
+            question: "But seriously, is Pluto a planet?",
+            answers: {
+                a: "no",
+                b: "yes of course it is",
+                c: "technically...it's a dwarf planet"
+            },
+            correctAnswer: 'c'
+        }
 ];
 
 // get references to HTML elements
@@ -73,13 +75,6 @@ function buildQuiz(){
           );
         }
   
-        // add this question and its answers to the output array
-        // output.push(
-        //   `<div class="slide">
-        //     <div class="question"> ${currentQuestion.question} </div>
-        //     <div class="answers"> ${answers.join('')} </div>
-        //   </div>`
-        // );
         if (questionNumber === 0) {
           output.push(
               `<div class="slide active-slide">
@@ -127,7 +122,7 @@ function showResults(){
     // how can I set the opacity to 10 after we show results?
     score--;
     resultsContainer.style.opacity = 10;
-    resultsContainer.innerHTML = `Your score: ${score} / 12`;
+    resultsContainer.innerHTML = `Your score: ${score} / 27`;
 
     submitButton.removeEventListener('click', showResults);
     startButton.removeEventListener("click", showNextSlide);

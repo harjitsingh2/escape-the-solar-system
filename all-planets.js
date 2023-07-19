@@ -257,7 +257,7 @@ let neptune = [
 
 let pluto = [
     {
-      question: "Pluto is by far the most controversial celestial body in our solar system. Once a planet, Pluto has been 'demoted' to dwarf planet status. The main reason for this is that Pluto's orbit, size, and composition is more similar to other objects in the Kuiper Belt. So it was demoted, it simply changed teams. Interestingly, Pluto has its own team within its orbit. Pluto has 5 moons. The biggest moon, Charon, is almost the same size as Pluto."
+      question: "Pluto is by far the most controversial celestial body in our solar system. Once a planet, Pluto has been 'demoted' to dwarf planet status. The main reason for this is that Pluto's orbit, size, and composition is more similar to other objects in the Kuiper Belt. So it was demoted, it simply changed teams. Interestingly, Pluto has its own team within its orbit. Pluto has 5 moons. The biggest moon, Charon, is almost the same size as Pluto. Again, although Pluto is now considered a 'dwarf planet', it is still a vital part of our solar system. Pluto is the last hurdle before you reach the outer ends of our solar system."
     },  
     {
           question: "Is Pluto a planet?",

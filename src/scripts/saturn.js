@@ -1,49 +1,49 @@
 import Planet from './planet.js';
 
 
-let mars = new Planet;
+let saturn = new Planet;
 
 function makePlanet() {
     const planet = document.getElementById("myplanet");
     planet.width = 400;
     planet.height = 600;
     const ctx = planet.getContext("2d"); 
-    mars.makeMars(ctx);
+    saturn.makeSaturn(ctx);
 }
 makePlanet();
 
-// console.log("Welcome to Mars");
 
 // array of questions and answer objects
 let questions = [
-  {
-    question: "Mars is the only other planet that humans have explored with rovers, essentially making it our second home. Although Mars is mostly a cold and dusty desert, it does have incredible features like polar ice caps, extinct volcanoes, and canyons. Mars has no rings, but it does have two moons named Phobos and Deimos. There is no life currently on Mars. However, this doesn't rule out the possibility of there having been life on Mars."
-  }, 
-  {
-        question: "Is there water on Mars?",
-        answers: {
-            a: "no",
-            b: "yes"
-        },
-        correctAnswer: 'b'
-    },
     {
-        question: "How many moons does Mars have?",
-        answers: {
-            a: "0",
-            b: "1",
-            c: "2"
+        question: "Saturn might not be the only planet that has rings, but its rings are the most prominent and beautiful rings in our solar system. Similar to Jupiter, Saturn is also a gas planet made mostly of hydrogen and helium. Saturn cannot sustain life, but some of its moons, notably Enceladus, have the potential to sustain life."
+      },  
+      {
+            question: "Saturn is the only planet with rings.",
+            answers: {
+                a: "false",
+                b: "true"
+            },
+            correctAnswer: 'a'
         },
-        correctAnswer: 'c'
-    },
-    {
-        question: "Are there any living species on Mars?",
-        answers: {
-            a: "no",
-            b: "yes"
+        {
+            question: "What is Saturn's atmosphere primarily composed of?",
+            answers: {
+                a: "hydrogen",
+                b: "nitrogen",
+                c: "oxygen"
+            },
+            correctAnswer: 'a'
         },
-        correctAnswer: 'a'
-    }
+        {
+            question: "Saturn is the _______ planet from the Sun.",
+            answers: {
+                a: "fifth",
+                b: "sixth",
+                c: "seventh"
+            },
+            correctAnswer: 'b'
+        }
 ];
 
 // get references to HTML elements
@@ -73,13 +73,6 @@ function buildQuiz(){
           );
         }
   
-        // add this question and its answers to the output array
-        // output.push(
-        //   `<div class="slide">
-        //     <div class="question"> ${currentQuestion.question} </div>
-        //     <div class="answers"> ${answers.join('')} </div>
-        //   </div>`
-        // );
         if (questionNumber === 0) {
           output.push(
               `<div class="slide active-slide">
@@ -127,7 +120,7 @@ function showResults(){
     // how can I set the opacity to 10 after we show results?
     score--;
     resultsContainer.style.opacity = 10;
-    resultsContainer.innerHTML = `Your score: ${score} / 12`;
+    resultsContainer.innerHTML = `Your score: ${score} / 18`;
 
     submitButton.removeEventListener('click', showResults);
     startButton.removeEventListener("click", showNextSlide);
