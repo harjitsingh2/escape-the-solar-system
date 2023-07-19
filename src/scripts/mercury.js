@@ -12,7 +12,7 @@ function makePlanet1() {
 }
 makePlanet1();
 
-console.log("Welcome to Mercury");
+// console.log("Welcome to Mercury");
 
 // array of questions and answer objects
 let questions = [

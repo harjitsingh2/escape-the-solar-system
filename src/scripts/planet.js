@@ -18,7 +18,7 @@ class Planet {
         base_image.onload = function() {
             ctx.drawImage(base_image, -50, 150, 500, 500 * base_image.height / base_image.width);
         }
-        console.log("Mercury created");
+        // console.log("Mercury created");
     }
     // add Venus to canvas
     makeVenus(ctx) {
@@ -30,7 +30,7 @@ class Planet {
         base_image.onload = function() {
             ctx.drawImage(base_image, 0, 150, 380, 380 * base_image.height / base_image.width);
         }
-        console.log("Venus created");
+        // console.log("Venus created");
     }
 
     makeEarth(ctx) {
@@ -42,7 +42,7 @@ class Planet {
         base_image.onload = function() {
             ctx.drawImage(base_image, 0, 150, 400, 400 * base_image.height / base_image.width);
         }
-        console.log("Earth created");
+        // console.log("Earth created");
     }
     
     makeMars(ctx) {
@@ -54,7 +54,7 @@ class Planet {
         base_image.onload = function() {
             ctx.drawImage(base_image, -100, 140, 600, 600 * base_image.height / base_image.width);
         }
-        console.log("Mars created");
+        // console.log("Mars created");
     }
 
     makeJupiter(ctx) {
@@ -66,7 +66,7 @@ class Planet {
         base_image.onload = function() {
             ctx.drawImage(base_image, -50, 150, 500, 500 * base_image.height / base_image.width);
         }
-        console.log("Jupiter created");
+        // console.log("Jupiter created");
     }
 
     makeSaturn(ctx) {
@@ -78,7 +78,7 @@ class Planet {
         base_image.onload = function() {
             ctx.drawImage(base_image, -50, 150, 500, 500 * base_image.height / base_image.width);
         }
-        console.log("Saturn created");
+        // console.log("Saturn created");
     }
 
     makeUranus(ctx) {
@@ -90,7 +90,7 @@ class Planet {
         base_image.onload = function() {
             ctx.drawImage(base_image, -50, 150, 500, 500 * base_image.height / base_image.width);
         }
-        console.log("Uranus created");
+        // console.log("Uranus created");
     }
 
     makeNeptune(ctx) {
@@ -102,7 +102,7 @@ class Planet {
         base_image.onload = function() {
             ctx.drawImage(base_image, -50, 150, 500, 500 * base_image.height / base_image.width);
         }
-        console.log("Neptune created");
+        // console.log("Neptune created");
     }
 
 

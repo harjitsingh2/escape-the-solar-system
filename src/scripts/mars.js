@@ -1,18 +1,18 @@
 import Planet from './planet.js';
 
 
-let mercury = new Planet;
+let mars = new Planet;
 
 function makePlanet() {
     const planet = document.getElementById("myplanet");
     planet.width = 400;
     planet.height = 600;
     const ctx = planet.getContext("2d"); 
-    mercury.makeMars(ctx);
+    mars.makeMars(ctx);
 }
 makePlanet();
 
-console.log("Welcome to Mars");
+// console.log("Welcome to Mars");
 
 // array of questions and answer objects
 let questions = [

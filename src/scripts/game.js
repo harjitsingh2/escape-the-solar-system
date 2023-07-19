@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
 const planetFiles = ['./mercury.js', './venus.js', './earth.js', './mars.js'];
 
 let currentPlanetIndex = 0;
-console.log("Begin game");
+// console.log("Begin game");
 
 function loadPlanet(currentPlanetIndex) {
     import(`${planetFiles[currentPlanetIndex]}`);    
