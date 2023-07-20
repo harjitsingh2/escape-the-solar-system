@@ -12,7 +12,9 @@ window.addEventListener('DOMContentLoaded', () => {
   });
   
 
-const planetFiles = ['./mercury.js', './venus.js', './earth.js', './mars.js', './jupiter.js', './saturn.js', './uranus.js', './neptune.js', './pluto.js'];
+// const planetFiles = ['./mercury.js', './venus.js', './earth.js', './mars.js', './jupiter.js', './saturn.js', './uranus.js', './neptune.js', './pluto.js'];
+const planetFiles = ['./neptune.js', './pluto.js'];
+
 
 let currentPlanetIndex = 0;
 // console.log("Begin game");
