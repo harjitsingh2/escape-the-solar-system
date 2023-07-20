@@ -171,3 +171,11 @@ nav {
   z-index: 5;
   display: none;
 }
+
+#results-screen {
+  display: none;
+}
+
+.end-game {
+  color: white;
+}

@@ -53,6 +53,8 @@ const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 const planetButton = document.getElementById('next-planet');
+const planet = document.getElementById("myplanet");
+const endButton = document.getElementById('results-screen');
 
 // create our game quiz
 function buildQuiz(){
@@ -156,10 +158,11 @@ function showSlide(n) {
       slides[0].classList.add('active-slide');
       slides[1].classList.add('active-slide');
       slides[2].classList.add('active-slide');
-      planetButton.style.display = 'inline-block';
+      planetButton.style.display = 'none';
       nextButton.style.display = 'none';
       submitButton.style.display = 'none';
       startButton.style.display = 'none';
+      endButton.style.display = 'inline-block';
     })
 }
 
@@ -181,3 +184,25 @@ showSlide(currentSlide);
 submitButton.addEventListener('click', showResults);
 startButton.addEventListener("click", showNextSlide);
 nextButton.addEventListener("click", showNextSlide);
+
+function endGame() {
+  const win = document.querySelector('.win');
+  const lose = document.querySelector('.lose');
+ 
+
+  endButton.addEventListener("click", () => {
+    quizContainer.style.display = 'none';
+    planet.style.display = 'none';
+    endButton.style.display = 'none';
+    
+    if (score >=20) {
+      win.style.display = 'inline-block';
+    } else {
+      lose.style.display = 'inline-block';
+    }
+
+  })
+
+}
+
+endGame();
