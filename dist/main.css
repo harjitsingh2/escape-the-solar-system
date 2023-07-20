@@ -19,6 +19,7 @@ h1 {
   font-family: "Space Mono", monospace;
   font-weight: bold;
   padding: 2%;
+  cursor: default;
 }
 
 #welcome {
@@ -83,6 +84,7 @@ h1:hover {
   row-gap: 10px;
   justify-content: space-evenly;
   padding: 5%;
+  cursor: default;
 }
 
 #quiz {
