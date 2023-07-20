@@ -178,4 +178,17 @@ nav {
 
 .end-game {
   color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Space Mono", monospace;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #1a2c80;
+  border-radius: 20%;
+  padding: 3%;
+  z-index: 5;
+  display: none;
 }

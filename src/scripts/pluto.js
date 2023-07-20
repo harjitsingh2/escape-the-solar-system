@@ -186,14 +186,24 @@ startButton.addEventListener("click", showNextSlide);
 nextButton.addEventListener("click", showNextSlide);
 
 function endGame() {
+  const end = document.querySelector('.end-game');
   const win = document.querySelector('.win');
   const lose = document.querySelector('.lose');
+  const nav = document.querySelector('.nav');
  
 
   endButton.addEventListener("click", () => {
     quizContainer.style.display = 'none';
     planet.style.display = 'none';
     endButton.style.display = 'none';
+    end.style.display = 'inline-block';
+    // nav.style.display = 'inline-block';
+    nav.style.position = 'fixed';
+    nav.style.right = '-130px';
+    nav.style.top = '220px';
+    nav.style.gap = '60px';
+    resultsContainer.style.left = '100px'
+    resultsContainer.style.font = '100px'
     
     if (score >=20) {
       win.style.display = 'inline-block';
