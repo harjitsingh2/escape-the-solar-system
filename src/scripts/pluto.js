@@ -190,12 +190,14 @@ function endGame() {
   const win = document.querySelector('.win');
   const lose = document.querySelector('.lose');
   const nav = document.querySelector('.nav');
+  const buttons = document.querySelector('.buttons');
  
 
   endButton.addEventListener("click", () => {
     quizContainer.style.display = 'none';
     planet.style.display = 'none';
     endButton.style.display = 'none';
+    buttons.style.display = 'none';
     end.style.display = 'inline-block';
     // nav.style.display = 'inline-block';
     nav.style.position = 'fixed';
