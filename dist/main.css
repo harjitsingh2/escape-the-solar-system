@@ -33,14 +33,15 @@ h1 {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
+  font-family: "Space Mono", monospace;
 }
 
 #instructions {
   color: white;
   margin-left: 100px;
   margin-right: 100px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 60px;
+  margin-bottom: 10px;
   text-align: center;
   font-size: 30px;
 }
@@ -70,6 +71,10 @@ h1 {
 
 h1:hover {
   color: #1a2c80;
+}
+
+#planet {
+  font-family: sans-serif;
 }
 
 .quiz-container {
@@ -128,6 +133,7 @@ nav {
   color: white;
   background-color: #1a2c80;
   border-radius: 50%;
+  font-family: "Space Mono", monospace;
 }
 
 .buttons:hover {

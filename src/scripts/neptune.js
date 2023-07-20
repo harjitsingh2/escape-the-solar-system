@@ -16,7 +16,7 @@ makePlanet();
 // array of questions and answer objects
 let questions = [
     {
-        question: "The eight and final planet in our solar system is Neptune. It is 30 times further from the Sun that Earth. Neptune is not visible by the naked eye when we look up to the sky on Earth. Neptune's 14 moons are named after sea gods and nymphs in Greek mythology. Neptune is so far from the Sun that 1 Neptunian year is equal to 165 Earth years."
+        question: "The eighth and final planet in our solar system is Neptune. It is 30 times further from the Sun that Earth. Neptune is not visible by the naked eye when we look up to the sky on Earth. Neptune's 14 moons are named after sea gods and nymphs in Greek mythology. Neptune is so far from the Sun that 1 Neptunian year is equal to 165 Earth years."
       },  
       {
             question: "Neptune is the last planet in our solar system",
