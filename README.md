@@ -3,7 +3,7 @@
 
 **Escape the Solar System!** gives those who are curious about space the opportunity to explore our solar system. **Escape the Solar System** is an educational game where users are encouraged to learn and answer questions correctly about space facts.
 
-Hop into our spaceship and explore the outer reaches of our solar system. Starting at Mercury, you must answer questions about each planet. When you reach the end of the solar system, you can escape the solar system depending on how many questions you answered correctly. 
+Hop into our spaceship and explore the outer reaches of our solar system. Starting at Mercury, players must answer questions about each planet. When the player reaches the end of the solar system, they can *escape the solar system* depending on how many questions they answered correctly. 
 
 [PLAY HERE](https://harjitsingh2.github.io/escape-the-solar-system/)
 
