@@ -129,7 +129,21 @@ nav {
     text-align: center;
 }
 
-.buttons {
+// .buttons {
+//     display: flex;
+//     flex-direction: row;
+//     text-align: center;
+//     width: fit-content;
+//     height:fit-content;
+//     padding: 2%;
+//     font-size: 20px;
+//     color: white;
+//     background-color: #1a2c80;
+//     border-radius: 50%;
+//     font-family: 'Space Mono', monospace;
+// }
+
+#start {
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -141,12 +155,87 @@ nav {
     background-color: #1a2c80;
     border-radius: 50%;
     font-family: 'Space Mono', monospace;
-
 }
 
-.buttons:hover {
-   color: #D5AB55;
+#start:hover {
+    color: #D5AB55;
 }
+
+#next {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: fit-content;
+    height:fit-content;
+    padding: 2%;
+    font-size: 20px;
+    color: white;
+    background-color: #1a2c80;
+    border-radius: 50%;
+    font-family: 'Space Mono', monospace;
+}
+
+#next:hover {
+    color: #D5AB55;
+}
+
+#submit {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: fit-content;
+    height:fit-content;
+    padding: 2%;
+    font-size: 20px;
+    color: white;
+    background-color: #1a2c80;
+    border-radius: 50%;
+    font-family: 'Space Mono', monospace;
+}
+
+#submit:hover {
+    color: #D5AB55;
+}
+
+#next-planet {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: fit-content;
+    height:fit-content;
+    padding: 2%;
+    font-size: 20px;
+    color: white;
+    background-color: #1a2c80;
+    border-radius: 50%;
+    font-family: 'Space Mono', monospace;
+}
+
+#next-planet:hover {
+    color: #D5AB55;
+}
+
+#results-screen {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: fit-content;
+    height:fit-content;
+    padding: 2%;
+    font-size: 20px;
+    color: white;
+    background-color: #1a2c80;
+    border-radius: 50%;
+    font-family: 'Space Mono', monospace;
+}
+
+#result-screen:hover {
+    color: #D5AB55;
+}
+
+// .buttons:hover {
+//    color: #D5AB55;
+// }
 
 .nav-button:hover{
     color: #1a2c80;

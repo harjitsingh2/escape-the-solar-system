@@ -124,7 +124,7 @@ nav {
   text-align: center;
 }
 
-.buttons {
+#start {
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -138,7 +138,79 @@ nav {
   font-family: "Space Mono", monospace;
 }
 
-.buttons:hover {
+#start:hover {
+  color: #D5AB55;
+}
+
+#next {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 2%;
+  font-size: 20px;
+  color: white;
+  background-color: #1a2c80;
+  border-radius: 50%;
+  font-family: "Space Mono", monospace;
+}
+
+#next:hover {
+  color: #D5AB55;
+}
+
+#submit {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 2%;
+  font-size: 20px;
+  color: white;
+  background-color: #1a2c80;
+  border-radius: 50%;
+  font-family: "Space Mono", monospace;
+}
+
+#submit:hover {
+  color: #D5AB55;
+}
+
+#next-planet {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 2%;
+  font-size: 20px;
+  color: white;
+  background-color: #1a2c80;
+  border-radius: 50%;
+  font-family: "Space Mono", monospace;
+}
+
+#next-planet:hover {
+  color: #D5AB55;
+}
+
+#results-screen {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 2%;
+  font-size: 20px;
+  color: white;
+  background-color: #1a2c80;
+  border-radius: 50%;
+  font-family: "Space Mono", monospace;
+}
+
+#result-screen:hover {
   color: #D5AB55;
 }
 

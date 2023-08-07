@@ -23,6 +23,7 @@ function loadPlanet(currentPlanetIndex) {
     import(`${planetFiles[currentPlanetIndex]}`);    
 }
 
+
 const planetButton = document.getElementById('next-planet');
 const body = document.querySelector('#planet');
 const transition = document.querySelector('#planet-transition');

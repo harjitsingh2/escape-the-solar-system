@@ -200,3 +200,18 @@ showSlide(currentSlide);
 submitButton.addEventListener('click', showResults);
 startButton.addEventListener("click", showNextSlide);
 nextButton.addEventListener("click", showNextSlide);
+
+// startButton.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   showNextSlide;
+// });
+
+// submitButton.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   showResults;
+// });
+
+// nextButton.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   showNextSlide;
+// });
